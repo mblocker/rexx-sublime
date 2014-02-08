@@ -9,39 +9,22 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>(?x)
-	    ^                            # start of line
-	      (.*\*/)?                 # skip comments if present
-          (			
-	           \s*end                # whitespace and an end
-	           [;\s]*                # any whitespace or semicolons
-<!--           |
-             (?:\s*(when|otherwise)\b.*) # when and otherwise statements pop back one indent -->
-          )
-	      ;?(\s*/\*.*\*/\s*)?           # ignore trailing comments if there
-	    $                            # end of line
-  	</string>
+    <string>(?x)^.*\b(end)\b.*$</string>
+
 		<key>increaseIndentPattern</key>
-		<string>(?x)
-	    ^ 
-        (?: .* \*/ )?				# skip any comments
-          (?:
-           (.*\bdo\b.*)		# lines containing a do statement
-           |						# OR
-           (?:\s*(select|when|otherwise)\b.*)	# select statements
-          )
-		    (/\*.*\*/\s*)?           # ignore trailing comments if there
-      $
-  	</string>
+		<string>(?x)^.*\b(do|select)\b.*$</string>
+
+		<key>unIndentedLinePattern</key>
+		<string>^\s*(/\*|\*/).*$</string>
+
+		<key>bracketIndentNextLinePattern</key>
+		<string>(?x)^.*,\s*$</string>
+
 		<key>disableIndentNextLinePattern</key>
-		<string>(?x)
-			^
-	    	.*,\s*                   # indent continued lines (trailing ,)
-		    (/\*.*\*/\s*)?           # ignore trailing comments if there
-	    $
-	  </string>
-<!-- 		<key>unIndentedLinePattern</key>
-		<string>^\s*((/\*|\*/).*)?$</string>  # do not indent comment lines -->
+		<string>(?x)^.*,\s*$</string>
+
+		<key>indentParens</key>
+		<string>false</string>
 	</dict>
 	<key>uuid</key>
 	<string>160118A4-208D-4422-AFF0-0C21B5B78AAF</string>
