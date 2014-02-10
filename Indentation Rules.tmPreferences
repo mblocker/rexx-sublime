@@ -9,19 +9,19 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-    <string>(?x)^.*\b(end)\b.*$</string>
+    <string>(?ix)^.*\b(end)\b.*$</string>
 
 		<key>increaseIndentPattern</key>
-		<string>(?x)^.*\b(do|select)\b.*$</string>
+		<string>(?ix)^(.*\b(do)\b|\s*\b(select)\b).*$</string>
 
 		<key>unIndentedLinePattern</key>
 		<string>^\s*(/\*|\*/).*$</string>
 
 		<key>bracketIndentNextLinePattern</key>
-		<string>(?x)^.*,\s*$</string>
+		<string>(?ix)^(?!.*\bdo\b).*(,|(\b(then|else)\b))\s*(/\*.*\*/\s*)?$</string>
 
 		<key>disableIndentNextLinePattern</key>
-		<string>(?x)^.*,\s*$</string>
+		<string>(?ix)^(.*,|\s*\b(do)\b)\s*(/\*.*\*/\s*)?$</string>
 
 		<key>indentParens</key>
 		<string>false</string>
