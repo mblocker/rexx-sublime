@@ -1,0 +1,4 @@
+{
+	"cmd": ["/usr/local/bin/regina","$file"],
+	"selector": "source.rexx"
+}
