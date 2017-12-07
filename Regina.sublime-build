@@ -1,4 +1,5 @@
 {
 	"cmd": ["/usr/local/bin/regina","$file"],
-	"selector": "source.rexx"
+	"selector": "source.rexx",
+	"file_regex": "^Error [0-9]+ running \"(.+)\", line ([0-9]+): ()(.*)"
 }
