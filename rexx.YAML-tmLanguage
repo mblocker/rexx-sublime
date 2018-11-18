@@ -2,7 +2,7 @@
 ---
 name: REXX
 scopeName: source.rexx
-fileTypes: [rex]
+fileTypes: [rexx,rex]
 uuid: 1ebe3dbc-ae7f-413a-990f-c37fc1b0d204
 firstLineMatch: /\*.*(?i:REXX)\b
 foldingStartMarker: (/\*|\b(do|select)\b)
